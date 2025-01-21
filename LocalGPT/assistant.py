@@ -38,8 +38,8 @@ def respond(text):
 def listen_for_command():
     with source as s:
         print("Listening for commands...")
-        recognizer.adjust_for_ambient_noise(source)
-        audio = recognizer.listen(source)
+        recognizer.adjust_for_ambient_noise(s)
+        audio = recognizer.listen(s)
 
     try:
         with open("command.wav", "wb") as f:
